@@ -1,5 +1,5 @@
 
-import { Card } from 'antd'
+import { Button, Card } from 'antd'
 import './ProductCard.css'
 
 const { Meta } = Card
@@ -7,23 +7,23 @@ const { Meta } = Card
 const ProductCard = ({ item }) => {
   const { title, description, image, ingredients } = item
 
-  const shortDesc = typeof description === 'string' ? (description.length > 120 ? description.slice(0, 120) + '...' : description) : ''
-  const ingredientsText = Array.isArray(ingredients)
-    ? ingredients.join(', ')
-    : ingredients && typeof ingredients === 'string'
-    ? ingredients
-    : ''
-
   return (
     <Card
       hoverable
       className="product-card"
       cover={<img alt={title} src={image} className="product-image" />}
     >
-      <Meta title={title} description={<div className="product-desc">{shortDesc}</div>} />
-      {ingredientsText ? (
-        <div className="product-ingredients">Ingredients: {ingredientsText}</div>
-      ) : null}
+      <div className="product-overlay">
+        <div className="overlay-content">
+          <p className="overlay-desc">{description?.slice(0,120)}{description && description.length>120 ? '...' : ''}</p>
+          <Button type="primary" className="view-button" onClick={() => console.log('View', title)}>View</Button>
+        </div>
+      </div>
+
+      <Meta title={title} description={<div className="product-desc">{description?.slice(0,120)}{description && description.length>120 ? '...' : ''}</div>} />
+      {ingredients && (
+        <div className="product-ingredients">Ingredients: {Array.isArray(ingredients) ? ingredients.join(', ') : String(ingredients)}</div>
+      )}
     </Card>
   )
 }

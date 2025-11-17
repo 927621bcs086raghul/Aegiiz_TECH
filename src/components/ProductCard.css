@@ -1,5 +1,7 @@
 .product-card { border-radius: 8px;
 height: 450px;
+position: relative;
+overflow: hidden;
 }
 .ant-card{
 height: 450px;
@@ -8,3 +10,29 @@ overflow: hidden;
 .product-image { width: 100%; height: 300px; object-fit: cover }
 .product-desc { color: #555; margin-top: 6px }
 .product-ingredients { margin-top: 8px; color: #777; font-size: 12px }
+
+/* Overlay shown on hover */
+.product-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0,0,0,0.55);
+	color: #fff;
+	opacity: 0;
+	transition: opacity 0.2s ease-in-out;
+	padding: 12px;
+	box-sizing: border-box;
+}
+
+.product-card:hover .product-overlay {
+	opacity: 1;
+}
+
+.overlay-content { text-align: center; max-width: 90%; }
+.overlay-desc { margin-bottom: 12px; color: #fff; font-size: 14px }
+.view-button { border-radius: 20px }
