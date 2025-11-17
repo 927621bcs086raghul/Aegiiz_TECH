@@ -1,0 +1,14 @@
+.popular-section { padding: 20px 0; background: #f6f7f8 }
+.popular-section .section-header { max-width: 1100px; margin: 0 auto; padding: 12px 16px }
+.popular-section h2 { margin: 0; font-size: 22px }
+
+.popular-scroll-wrap { padding: 0 16px; max-width: 1100px; margin: 0 auto; overflow-x: auto; -webkit-overflow-scrolling: touch }
+.popular-scroll-inner { display:flex; gap:16px; padding-bottom:8px; scroll-behavior: smooth }
+.popular-item { flex: 0 0 260px }
+.popular-item .product-card .product-image { height: 200px; object-fit: cover }
+
+.load-more { display:flex; justify-content:center; padding:16px }
+
+.product-card-skeleton { width: 100%; }
+.product-card-skeleton .ant-skeleton-element { width: 100% }
+

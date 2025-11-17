@@ -1,0 +1,6 @@
+.product-grid-wrap { padding: 16px; max-width: 1100px; margin: 0 auto }
+.grid-loading { padding: 32px; display:flex; justify-content:center }
+.grid-error { padding: 16px; max-width: 1100px; margin: 0 auto }
+
+.grid-pagination { display:flex; justify-content:center; padding: 20px 0 }
+

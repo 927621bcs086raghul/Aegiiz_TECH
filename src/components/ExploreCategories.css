@@ -1,0 +1,6 @@
+.explore-section { padding: 20px 0; background: #f6f7f8 }
+.explore-section .section-header { max-width: 1100px; margin: 0 auto; padding: 12px 16px }
+.explore-section h2 { margin: 0; font-size: 22px }
+.explore-grid { padding: 0 16px; max-width: 1100px; margin: 0 auto }
+.category-tile { display:flex; align-items:flex-end; justify-content:flex-start; height:260px; border-radius:12px; overflow:hidden; color:#fff; padding:20px; background-size:cover; background-position:center; text-decoration:none }
+.category-tile .cat-title { font-size:20px; font-weight:700 }
